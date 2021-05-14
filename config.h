@@ -93,32 +93,37 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 8;
 
-float alpha = 0.9;
+float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#1c1c1c", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#048ac7",
-	"#48c6ff",
-	"#833c9f",
-	"#be67e1",
-	"#cee318",
-	"#ccff00",
-	"#d79921",
-	"#fabd2f",
-	"#b8bb26",
-	"#ff005b",
-	"#ff00a0",
-	"#83a598",
-	"#8ec07c",
-	"#928374",
-	"#c5c5c5",
+	/* 8 normal colors */
+	"black",
+	"red3",
+	"green3",
+	"yellow3",
+	"blue2",
+	"magenta3",
+	"cyan3",
+	"gray90",
+
+	/* 8 bright colors */
+	"gray50",
+	"red",
+	"green",
+	"yellow",
+	"#5c5cff",
+	"magenta",
+	"cyan",
+	"white",
+
 	[255] = 0,
+
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
-	"#666666", /* 257 -> rev cursor*/
-	"#1c1c1c", /* 258 -> bg */
-	"#c5c5c5", /* 259 -> fg */
+	"#555555", /* 257 -> rev cursor*/
+	"#000000", /* 258 -> bg */
+	"#e5e5e5", /* 259 -> fg */
 };
 
 
