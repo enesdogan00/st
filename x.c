@@ -1921,7 +1921,7 @@ run(void)
 		}
 	} while (ev.type != MapNotify);
 
-	ttyfd = ttynew(opt_line, shell, opt_io, opt_cmd);
+	ttyfd = ttynew(opt_line, NULL, opt_io, opt_cmd);
 	cresize(w, h);
 
 	for (timeout = -1, drawing = 0, lastblink = (struct timespec){0};;) {

@@ -691,13 +691,17 @@ execsh(char *cmd, char **args)
 	if (args) {
 		prog = args[0];
 		arg = NULL;
-	} else if (scroll) {
+	}
+	/*	
+	else if (scroll) {
 		prog = scroll;
 		arg = utmp ? utmp : sh;
 	} else if (utmp) {
 		prog = utmp;
 		arg = NULL;
-	} else {
+	}
+	*/
+	else {
 		prog = sh;
 		arg = NULL;
 	}
@@ -748,6 +752,7 @@ stty(char **args)
 	char cmd[_POSIX_ARG_MAX], **p, *q, *s;
 	size_t n, siz;
 
+	/*
 	if ((n = strlen(stty_args)) > sizeof(cmd)-1)
 		die("incorrect stty parameters\n");
 	memcpy(cmd, stty_args, n);
@@ -761,6 +766,7 @@ stty(char **args)
 		q += n;
 		siz -= n + 1;
 	}
+	*/
 	*q = '\0';
 	if (system(cmd) != 0)
 		perror("Couldn't call stty");
